@@ -17,7 +17,6 @@ def pipeline():
     train = mlrun.run_function(
         "train",
         inputs={'train_data':data_fetch.outputs['train-dataset'],'test_data':data_fetch.outputs['test-dataset']},
-        returns=['model'],
         outputs=['model']
     )
     

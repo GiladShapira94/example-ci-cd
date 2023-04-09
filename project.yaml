@@ -1,0 +1,37 @@
+kind: project
+metadata:
+  name: new-git-proj
+spec:
+  functions:
+  - url: ./src/data_fetch.py
+    name: data-fetch
+    kind: job
+    image: mlrun/mlrun
+    handler: data_fetch
+    with_repo: true
+  - url: ./src/train.py
+    name: train
+    kind: job
+    image: mlrun/mlrun
+    handler: train
+    with_repo: true
+  - url: ./src/serving.yaml
+    name: serving
+  workflows:
+  - path: ./src/workflow.py
+    name: main
+  artifacts:
+  - kind: model
+    metadata:
+      project: new-git-proj
+      key: model-test
+    spec:
+      target_path: v3io:///projects/new-git-proj/artifacts/a668c9a7-27a2-446c-84fa-8e93fbd75ac7/train/0/model/
+      model_file: model.pkl
+    status:
+      state: created
+  conda: ''
+  source: git://github.com/GiladShapira94/example-ci-cd.git#master
+  origin_url: git://github.com/GiladShapira94/example-ci-cd.git#refs/heads/master
+  load_source_on_run: true
+  desired_state: online
