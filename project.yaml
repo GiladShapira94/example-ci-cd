@@ -26,7 +26,7 @@ spec:
       project: new-git-proj
       key: model-test
     spec:
-      target_path: v3io:///projects/new-git-proj/artifacts/a668c9a7-27a2-446c-84fa-8e93fbd75ac7/train/0/model/
+      target_path: v3io:///projects/new-git-proj/artifacts/cb0cc3d2-317c-483b-afdd-1b66acbaec8a/train/0/model/
       model_file: model.pkl
     status:
       state: created
