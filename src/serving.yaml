@@ -1,7 +1,7 @@
 kind: serving
 metadata:
   name: serving
-  hash: 4dd4f5acdb134e7e60978e2407d25a2e580b4941
+  hash: a713cca65672c70909b0067433bf16c5453c52c3
   project: new-git-proj
   categories: []
 spec:
