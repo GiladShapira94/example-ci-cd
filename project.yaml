@@ -1,0 +1,11 @@
+kind: project
+metadata:
+  name: new-git-proj
+spec:
+  functions: []
+  workflows: []
+  artifacts: []
+  conda: ''
+  source: git://github.com/GiladShapira94/example-ci-cd.git#refs/heads/master
+  origin_url: git://github.com/GiladShapira94/example-ci-cd.git#refs/heads/master
+  desired_state: online
