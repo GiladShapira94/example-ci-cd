@@ -1,8 +1,9 @@
 kind: serving
 metadata:
   name: serving
-  hash: 44c56c31ba742acad86e62462b1ebee98bda797a
-  project: new-git-proj
+  tag: v1
+  hash: c0ca544839d230fd91b1a48d44fb12fec1c15774
+  project: new-git-proj-shapira
   categories: []
 spec:
   command: ''
@@ -35,7 +36,7 @@ spec:
         kind: task
         class_name: mlrun.frameworks.sklearn.SklearnModelServer
         class_args:
-          model_path: store://artifacts/new-git-proj/model:0550aad3269f4686b055317ee2115775
+          model_path: store://artifacts/new-git-proj-shapira/model:c45c24f986944356a90e66f2fa692e2d
         after: []
   secret_sources: []
   affinity: null
