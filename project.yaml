@@ -10,12 +10,14 @@ spec:
     image: mlrun/mlrun
     handler: data_fetch
     with_repo: true
+    tag: v1
   - url: ./src/train.py
     name: train
     kind: job
     image: mlrun/mlrun
     handler: train
     with_repo: true
+    tag: v1
   - url: ./src/serving.yaml
     name: serving
   workflows:
