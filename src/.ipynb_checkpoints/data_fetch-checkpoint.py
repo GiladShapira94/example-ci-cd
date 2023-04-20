@@ -3,7 +3,7 @@ from sklearn.datasets import make_classification
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-def data_fetch():
+def data_fetch(context):
     # creating data
     x,y = make_classification()
     
@@ -19,5 +19,5 @@ def data_fetch():
     x_test_df = pd.DataFrame(x_test)
     y_test_df = pd.DataFrame(y_test,columns=['label'])
     df_test = pd.concat([x_test_df,y_test_df],axis=1)
-    
+    context.set_label("release","v1")
     return df_train,df_test

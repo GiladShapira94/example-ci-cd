@@ -3,7 +3,7 @@ import mlrun
 from mlrun.frameworks.sklearn import apply_mlrun
 
 @mlrun.handler()
-def train(
+def train(context :mlrun.MLClientCtx,
     train_data: mlrun.DataItem,  # data inputs are of type DataItem (abstract the data source)
     test_data: mlrun.DataItem,  # data inputs are of type DataItem (abstract the data source)
     label_column: str = "label",
@@ -33,6 +33,6 @@ def train(
     # Wraps the model with MLOps (test set is provided for analysis & accuracy measurements)
     apply_mlrun(model=model, model_name=model_name, x_test=X_test, y_test=y_test)
     # --------------------------------------------------------------------------------------
-
+    context.set_label("release","v1")
     # Train the model
     model.fit(X_train, y_train)
