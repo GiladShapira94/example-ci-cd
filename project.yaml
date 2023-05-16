@@ -18,7 +18,7 @@ spec:
     handler: train
     with_repo: true
     tag: v2
-  - url: ./src/serving.yaml
+  - url: ./function_spec/serving.yaml
     name: serving
   workflows:
   - path: ./src/workflow.py
