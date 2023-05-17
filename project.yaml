@@ -1,6 +1,6 @@
 kind: project
 metadata:
-  name: new-git-proj-shapira
+  name: new-ci-cd-proj-shapira
   created: '2023-04-17T13:27:10.756000'
 spec:
   functions:
@@ -26,10 +26,10 @@ spec:
   artifacts:
   - kind: model
     metadata:
-      project: new-git-proj-shapira
+      project: new-ci-cd-proj-shapira
       key: model-test
     spec:
-      target_path: v3io:///projects/new-git-proj-shapira/artifacts/dfb2ec08-69b6-4372-8bb6-04d6d247b595/train/0/model/
+      target_path: v3io:///projects/new-ci-cd-proj-shapira/artifacts/a5d545c6-fd5d-44e8-966c-24b9261314be/train/0/model/
       model_file: model.pkl
     status:
       state: created
@@ -38,6 +38,5 @@ spec:
   origin_url: git://github.com/GiladShapira94/example-ci-cd.git#refs/heads/master
   load_source_on_run: true
   desired_state: online
-  owner: shapira
 status:
   state: online

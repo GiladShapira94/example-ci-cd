@@ -2,8 +2,8 @@ kind: serving
 metadata:
   name: serving
   tag: v2
-  hash: 5152e7d40d2cc904467ca3c274ad45e216b5d8eb
-  project: new-git-proj-shapira
+  hash: 69bb977eaa1a771646b7894f7fe29e11e69bf20d
+  project: new-ci-cd-proj-shapira
   categories: []
 spec:
   command: ''
@@ -13,6 +13,7 @@ spec:
     commands: []
   description: ''
   disable_auto_mount: false
+  clone_target_dir: ''
   env: []
   resources:
     requests:
@@ -36,7 +37,7 @@ spec:
         kind: task
         class_name: mlrun.frameworks.sklearn.SklearnModelServer
         class_args:
-          model_path: store://artifacts/new-git-proj-shapira/model:2ab3fd77c56e4fa88ee975a4a58e5374
+          model_path: store://artifacts/new-ci-cd-proj-shapira/model:fe9595a72b9d4a63b95afd11c4d54444
         after: []
   secret_sources: []
   affinity: null
