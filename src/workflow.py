@@ -23,5 +23,5 @@ def pipeline():
     # Deploy the model as a serverless function
     deploy = mlrun.deploy_function(
         "serving",
-        models=[{'key':'model','model_path':train.outputs["model"], 'class_name':'mlrun.frameworks.sklearn.SklearnModelServer'}],tag="v2"
+        models=[{'key':'model','model_path':train.outputs["model"], 'class_name':'mlrun.frameworks.sklearn.SklearnModelServer'}],tag="v3"
     )

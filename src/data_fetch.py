@@ -19,5 +19,5 @@ def data_fetch(context):
     x_test_df = pd.DataFrame(x_test)
     y_test_df = pd.DataFrame(y_test,columns=['label'])
     df_test = pd.concat([x_test_df,y_test_df],axis=1)
-    context.set_label("release","v2")
+    context.set_label("release","v3")
     return df_train,df_test

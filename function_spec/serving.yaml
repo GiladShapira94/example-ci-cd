@@ -1,7 +1,7 @@
 kind: serving
 metadata:
   name: serving
-  tag: v2
+  tag: v3
   hash: 69bb977eaa1a771646b7894f7fe29e11e69bf20d
   project: new-ci-cd-proj-shapira
   categories: []
